@@ -1,7 +1,7 @@
 import math.Vector3
 class CubeMesh(Mesh):
 	def __init__(self, s):
-		vertices = {-s/2, s/2, s/2,   #F-U-L
+		self.vertices = {-s/2, s/2, s/2,   #F-U-L
 					s/2, s/2, s/2,    #F-U-R
 					s/2, -s/2, s/2,   #F-D-R
 					-s/2, -s/2, s/2,  #F-D-L
@@ -10,7 +10,7 @@ class CubeMesh(Mesh):
 					-s/2, s/2, -s/2,  #B-U-L
 					s/2, s/2, -s/2}   #B-U-R
 
-		faces = {{0, 3, 2}, #Front Left
+		self.faces = {{0, 3, 2}, #Front Left
 				 {0, 2, 1}, #Front Right
 				 {2, 4, 7}, #Right Right
 				 {2, 7, 1}, #Right Left
@@ -23,7 +23,7 @@ class CubeMesh(Mesh):
 				 {0, 1, 7}, #Top Right 
 				 {0, 7, 6}} #Top Left
 				 
-		normal = {Vector3(0, 0, 1),  #Front Left
+		self.normal = {Vector3(0, 0, 1),  #Front Left
 				  Vector3(0, 0, 1),  #Front Right
 				  Vector3(1, 0, 0),  #Right Right
 				  Vector3(1, 0, 0),  #Right Left
